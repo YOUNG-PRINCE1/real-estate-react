@@ -1,0 +1,19 @@
+.pp div{
+    padding: 10px;
+}
+
+.get-to{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.get-to .loc{
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+.get-to img{
+    height: 17px;
+    width: 15px;
+}
