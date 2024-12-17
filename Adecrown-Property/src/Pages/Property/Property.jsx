@@ -1,6 +1,7 @@
 import React from 'react'
 import './Property.css'
 import Form from '../../Components/Form/Form'
+import Properties_data from '../../Mapping/Property-page-mapping'
 
 const Property = () => {
   return (
@@ -80,65 +81,30 @@ const Property = () => {
     </p>
   </div>
   <div className="row mt-5">
-    <div className="col-md-4 dd">
-      <img className="img-fluid" src="./img/Image (1).png" alt />
+    {
+      Properties_data.map((row) => (
+        <div key={row?.id} className="col-md-4 dd">
+      <img className="img-fluid" src={row?.image} alt />
       <div className="descrip mt-3">
         <p>
-          Coastal Escapes - Where Waves Beckon
+          {row?.attachment}
         </p>
       </div>
-      <h5 className="mt-3">Seaside Serenity Villa</h5>
-      <p>A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood... Read More</p>
+      <h5 className="mt-3">{row?.name}</h5>
+      <p>{row?.description}</p>
       <div className="row mt-5">
         <div className="col-md-4">
           <p className>Price</p>
-          <p>$550,000</p>
+          <p>{row?.price}</p>
         </div>
         <div className="col-md-8">
           <button className="btn btn-primary">View Property Details</button>
         </div>
       </div>
     </div>
-    <div className="col-md-4 dd">
-      <img className="img-fluid" src="./img/Image (2).png" alt />
-      <div className="descrip mt-3">
-        <p>
-          Urban Oasis - Life in the Heart of the City
-        </p>
-      </div>
-      <h5 className="mt-3">Metropolitan Haven</h5>
-      <p>A chic and fully-furnished 2-bedroom apartment with panoramic city views... Read More</p>
-      <div className="row mt-5">
-        <div className="col-md-4">
-          <p className>Price</p>
-          <p>$550,000</p>
-        </div>
-        <div className="col-md-8">
-          <button className="btn btn-primary">View Property Details</button>
-        </div>
-      </div>
-    </div>
-    <div className="col-md-4 dd">
-      <img className="img-fluid" src="./img/Image (3).png" alt />
-      <div className="descrip mt-3">
-        <p>
-          Countryside Charm - Escape to Nature's Embrace
-        </p>
-      </div>
-      <h5 className="mt-3">
-        Rustic Retreat Cottage
-      </h5>
-      <p>An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community... Read More</p>
-      <div className="row mt-5">
-        <div className="col-md-4">
-          <p className>Price</p>
-          <p>$550,000</p>
-        </div>
-        <div className="col-md-8">
-          <button className="btn btn-primary">View Property Details</button>
-        </div>
-      </div>
-    </div>
+      ))
+    }
+
   </div>
   <div className="mt-5">
     <h4>

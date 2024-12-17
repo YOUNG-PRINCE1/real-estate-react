@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import React, {Suspense, useState} from "react";
+
 import './App.css'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Header from './Components/Header'
@@ -18,35 +19,39 @@ import Contact from './Pages/Contact/Contact'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  
   return (
     <>
-      <Router>
+      <Suspense fallback={<div className="spinner-grow bg-danger text-light position-absolute top-50 start-50 translate-middle h-100">
+      
+      </div>}>
+        <Router>
 
-      <Header/>
-      <Routes>
-        <Route  path="/" element={<Home />} />
+          <Header/>
+          <Routes>
+            <Route  path="/" element={<Home />} />
 
-        <Route  path="/service" element={<Service />} />
+            <Route  path="/service" element={<Service />} />
 
-        <Route  path="/about" element={<About />} />
+            <Route  path="/about" element={<About />} />
 
-        <Route  path="/Property" element={<Property />} />
+            <Route  path="/Property" element={<Property />} />
 
-        <Route  path="/details" element={<Details />} />
+            <Route  path="/details" element={<Details />} />
 
-        <Route  path="/login" element={<Login />} />
+            <Route  path="/login" element={<Login />} />
 
-        <Route  path="/signup" element={<Signup />} />
+            <Route  path="/signup" element={<Signup />} />
 
-        <Route  path="/contact" element={<Contact />} />
+            <Route  path="/contact" element={<Contact />} />
 
 
-      </Routes>
-      <Footer2 />
-      <Footer/>
+          </Routes>
+          <Footer2 />
+          <Footer/>
 
-      </Router>
+        </Router>
+      </Suspense>
     </>
   )
 }

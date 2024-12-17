@@ -137,8 +137,8 @@ const Contact = () => {
         </p>
 
         <div className="mt-5">
-            <div className="row">
-                <div className="col-md-6">
+            <div className="row get-to">
+                <div className="col-md-6 direction mt-3">
                     <p>Main Headquarters</p>
                     <h5>No 10, Deji Omo-Owo street, Lagos, Nigeria.</h5>
                     <p className='mt-2'>
@@ -146,25 +146,60 @@ const Contact = () => {
                       Located in the bustling city center, this is where our core 
                       team of experts operates, driving the excellence and innovation that define us.
                     </p>
-                    <div className="row get-to">
-                    <div className="col-md-4 loc">
-                    <Link to='mailto:adecrowm2000@gmail.com' 
-                    className="navbar-brand text-light"><img src="./img/Subtract (1).png" 
+                    <div 
+                    className="mt-2 d-flex align-item-center justify-content-center border rounded-3 border-secondary">
+                    <Link to='mailto:adesemowomuhammed5@gmail.com' 
+                    className="navbar-brand text-light"><img src="./img/Subtract.png" 
                     alt="" />adecrown2000@gmail.com</Link>
                     </div>
-                    <div className="col-md-4 loc">
-                    <Link to='mailto:adecrowm2000@gmail.com' 
-                    className="navbar-brand text-light"><img src="./img/Subtract (1).png" 
-                    alt="" />adecrown2000@gmail.com</Link>
+                    <div className="row mt-2 ">
+                    <div className="col-md-6">
+                    <Link 
+                    to='mailto:adesemowomuhammed5@gmail.com' 
+                    className="navbar-brand text-light dir"><img src="./img/Subtract (1).png" 
+                    alt="" />get direction 
+                    </Link>
                     </div>
-                    <div className="col-md-4 loc">
-                    <Link to='mailto:adecrowm2000@gmail.com' 
-                    className="navbar-brand text-light"><img src="./img/Subtract (1).png" 
-                    alt="" />adecrown2000@gmail.com</Link>
+                    <div className="col-md-6">
+                    <Link 
+                    to='mailto:adesemowomuhammed5@gmail.com' 
+                    className="navbar-brand text-light dir"><img src="./img/Subtract (1).png" 
+                    alt="" />get direction 
+                    </Link>
                     </div>
                     </div>
                 </div>
-                <div className="col-md-6"></div>
+                <div className="col-md-6 direction mt-3">
+                    <p>Main Headquarters</p>
+                    <h5>No 10, Deji Omo-Owo street, Lagos, Nigeria.</h5>
+                    <p className='mt-2'>
+                      Our main headquarters serve as the heart of Adecrown. 
+                      Located in the bustling city center, this is where our core 
+                      team of experts operates, driving the excellence and innovation that define us.
+                    </p>
+                    <div 
+                    className="mt-2 d-flex align-item-center justify-content-center border rounded-3 border-secondary">
+                    <Link to='mailto:adesemowomuhammed5@gmail.com' 
+                    className="navbar-brand text-light"><img src="./img/Subtract.png" 
+                    alt="" />adecrown2000@gmail.com</Link>
+                    </div>
+                    <div className="row mt-2 ">
+                    <div className="col-md-6">
+                    <Link 
+                    to='mailto:adesemowomuhammed5@gmail.com' 
+                    className="navbar-brand text-light dir"><img src="./img/Subtract (1).png" 
+                    alt="" />get direction 
+                    </Link>
+                    </div>
+                    <div className="col-md-6">
+                    <Link 
+                    to='mailto:adesemowomuhammed5@gmail.com' 
+                    className="navbar-brand text-light dir"><img src="./img/Subtract (1).png" 
+                    alt="" />get direction 
+                    </Link>
+                    </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

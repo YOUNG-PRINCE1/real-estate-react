@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 import Faskq from '../../Components/Faq/Faq'
 import PropertyValue from '../../Components/Property-value/PropertyValue'
 
+import Top_Demand from '../../Mapping/Home-page-Property-Display'
+
 
 const Home = () => {
  
@@ -76,18 +78,20 @@ const Home = () => {
       </div>
     </div>
     <div className="row mt-5">
-      <div className="col-md-4 dd">
-        <img className="img-fluid" src="./img/Image (1).png" alt />
-        <h5>Seaside Serenity Villa</h5>
-        <p>A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood... Read More</p>
+      {
+        Top_Demand?.map((row) => (
+          <div key={row?.id} className="col-md-4 dd">
+        <img className="img-fluid" src={row.image} alt />
+        <h5>{row?.name}</h5>
+        <p>{row?.description}</p>
         <div className="row div gap-1">
           <div className="col-md-4 ">
             <img src="./img/Icon.png" alt />
-            <p className="mt-3">4-Bedroom</p>
+            <p className="mt-3">{row?.bedroom}-Bedroom</p>
           </div>
           <div className="col-md-4 ">
             <img src="./img/BACKGROUND_2.png" alt />
-            <p className="mt-3">3-Bathroom</p>
+            <p className="mt-3">{row?.bathroom}-Bathroom</p>
           </div>
           <div className="col-md-4 ">
             <img src="./img/Icon (1).png" alt />
@@ -97,69 +101,16 @@ const Home = () => {
         <div className="row mt-5">
           <div className="col-md-4">
             <p className>Price</p>
-            <p>$550,000</p>
+            <p>${row?.price}</p>
           </div>
           <div className="col-md-8">
             <button className="btn btn-primary">View Property Details</button>
           </div>
         </div>
       </div>
-      <div className="col-md-4 dd">
-        <img className="img-fluid" src="./img/Image (2).png" alt />
-        <h5>Metropolitan Haven</h5>
-        <p>A chic and fully-furnished 2-bedroom apartment with panoramic city views... Read More</p>
-        <div className="row div gap-1">
-          <div className="col-md-4 ">
-            <img src="./img/Icon.png" alt />
-            <p className="mt-3">4-Bedroom</p>
-          </div>
-          <div className="col-md-4 ">
-            <img src="./img/BACKGROUND_2.png" alt />
-            <p className="mt-3">3-Bathroom</p>
-          </div>
-          <div className="col-md-4 ">
-            <img src="./img/Icon (1).png" alt />
-            <p className="mt-3">Villa</p>
-          </div>
-        </div>
-        <div className="row mt-5">
-          <div className="col-md-4">
-            <p className>Price</p>
-            <p>$550,000</p>
-          </div>
-          <div className="col-md-8">
-            <button className="btn btn-primary">View Property Details</button>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-4 dd">
-        <img className="img-fluid" src="./img/Image (3).png" alt />
-        <h5>Rustic Retreat Cottage</h5>
-        <p>An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community... Read More</p>
-        <div className="row div gap-1">
-          <div className="col-md-4 ">
-            <img src="./img/Icon.png" alt />
-            <p className="mt-3">4-Bedroom</p>
-          </div>
-          <div className="col-md-4 ">
-            <img src="./img/BACKGROUND_2.png" alt />
-            <p className="mt-3">3-Bathroom</p>
-          </div>
-          <div className="col-md-4 ">
-            <img src="./img/Icon (1).png" alt />
-            <p className="mt-3">Villa</p>
-          </div>
-        </div>
-        <div className="row mt-5">
-          <div className="col-md-4">
-            <p className>Price</p>
-            <p>$550,000</p>
-          </div>
-          <div className="col-md-8">
-          <Link to='/details' className="btn btn-primary" >View Property Details</Link>
-          </div>
-        </div>
-      </div>
+        ))
+      }
+      
     </div>
   </div>
   <div className="container mt-5 ">
