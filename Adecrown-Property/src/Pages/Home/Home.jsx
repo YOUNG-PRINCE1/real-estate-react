@@ -104,7 +104,10 @@ const Home = () => {
             <p>${row?.price}</p>
           </div>
           <div className="col-md-8">
-            <button className="btn btn-primary">View Property Details</button>
+            
+            <Link to='/details' className="btn btn-primary" >
+              View Property Details
+            </Link>
           </div>
         </div>
       </div>
